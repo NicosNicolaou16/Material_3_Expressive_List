@@ -1,5 +1,6 @@
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,5 +29,4 @@ class ExpressiveListViewModel @Inject constructor(
                 }
         }
     }
-
 }
