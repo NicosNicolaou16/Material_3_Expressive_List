@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonDefaults.buttonElevation
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Scaffold
@@ -20,6 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
+import com.nicos.material3expressivelist.ui.theme.Purple40
+import com.nicos.material3expressivelist.ui.theme.Purple80
 
 @Composable
 fun ExpressiveListRoot(
@@ -66,6 +69,7 @@ fun ExpressiveListItem(
             modifier = Modifier
                 .height(height = 60.dp)
                 .fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Purple80),
             elevation = buttonElevation(
                 defaultElevation = 10.dp
             ),
