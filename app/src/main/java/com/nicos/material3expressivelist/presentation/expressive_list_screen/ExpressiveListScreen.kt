@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
+
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
 import androidx.compose.foundation.layout.Box
@@ -7,9 +9,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonDefaults.buttonElevation
+import androidx.compose.material3.ButtonShapes
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -69,6 +74,7 @@ fun ExpressiveListItem(
                 .height(height = 60.dp)
                 .fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Purple80),
+            shape = RoundedCornerShape(12.dp),
             elevation = buttonElevation(
                 defaultElevation = 9.dp
             ),
@@ -77,7 +83,7 @@ fun ExpressiveListItem(
             }) {
             Text(
                 item.title, style = TextStyle(
-                    fontSize = 15.sp,
+                    fontSize = 19.sp,
                 )
             )
         }
