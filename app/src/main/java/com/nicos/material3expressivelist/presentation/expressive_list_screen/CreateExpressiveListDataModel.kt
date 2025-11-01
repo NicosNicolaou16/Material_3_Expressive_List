@@ -30,14 +30,14 @@ class CreateExpressiveListDataModel(
 
             list.add(
                 ExpressiveListDataModel(
-                    "",
+                    context.getString(R.string.loading_progress_indicator),
                     screenRoutes = ScreenRoutes.LoadingProgressIndicatorScreen
                 )
             )
 
             list.add(
                 ExpressiveListDataModel(
-                    "",
+                    context.getString(R.string.fab_menu_with_list),
                     screenRoutes = ScreenRoutes.FabMenuWithListScreen
                 )
             )

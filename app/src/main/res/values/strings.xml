@@ -2,4 +2,6 @@
     <string name="app_name">Material3ExpressiveList</string>
     <string name="button_groups">Button Groups</string>
     <string name="split_buttons">Split Buttons</string>
+    <string name="loading_progress_indicator">Loading Progress Indicator</string>
+    <string name="fab_menu_with_list">Fab Menu with List</string>
 </resources>
