@@ -28,6 +28,41 @@ class CreateExpressiveListDataModel(
                 )
             )
 
+            list.add(
+                ExpressiveListDataModel(
+                    "",
+                    screenRoutes = ScreenRoutes.LoadingProgressIndicatorScreen
+                )
+            )
+
+            list.add(
+                ExpressiveListDataModel(
+                    "",
+                    screenRoutes = ScreenRoutes.FabMenuWithListScreen
+                )
+            )
+
+            list.add(
+                ExpressiveListDataModel(
+                    "",
+                    screenRoutes = ScreenRoutes.FabMenuScreen
+                )
+            )
+
+            list.add(
+                ExpressiveListDataModel(
+                    "",
+                    screenRoutes = ScreenRoutes.FloatingToolBarWithListScreen
+                )
+            )
+
+            list.add(
+                ExpressiveListDataModel(
+                    "",
+                    screenRoutes = ScreenRoutes.FloatingToolBarScreen
+                )
+            )
+
             emit(list)
         }
     }
