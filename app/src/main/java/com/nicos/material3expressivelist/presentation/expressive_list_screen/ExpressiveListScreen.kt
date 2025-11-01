@@ -2,6 +2,9 @@
 
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -19,8 +22,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -64,17 +73,30 @@ fun ExpressiveListItem(
     item: ExpressiveListDataModel,
     screen: (ScreenRoutes) -> Unit
 ) {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
+
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed) 0.95f else 1f,
+        label = "scale"
+    )
+
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = 40.dp, end = 40.dp, top = 32.dp)
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            },
     ) {
         ElevatedButton(
             modifier = Modifier
-                .height(height = 60.dp)
+                .height(height = 80.dp)
                 .fillMaxWidth(),
+            interactionSource = interactionSource,
             colors = ButtonDefaults.buttonColors(containerColor = Purple80),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(15.dp),
             elevation = buttonElevation(
                 defaultElevation = 9.dp
             ),
@@ -82,8 +104,11 @@ fun ExpressiveListItem(
                 screen(item.screenRoutes)
             }) {
             Text(
-                item.title, style = TextStyle(
-                    fontSize = 19.sp,
+                item.title,
+                textAlign = TextAlign.Center,
+                style = TextStyle(
+                    fontSize = 21.sp,
+                    fontWeight = FontWeight.Bold
                 )
             )
         }
