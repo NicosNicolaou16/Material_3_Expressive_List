@@ -77,7 +77,7 @@ fun ExpressiveListItem(
             }) {
             Text(
                 item.title, style = TextStyle(
-                    fontSize = 19.sp,
+                    fontSize = 15.sp,
                 )
             )
         }
