@@ -15,7 +15,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
@@ -68,10 +70,16 @@ fun ExpressiveListItem(
                 .fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Purple80),
             elevation = buttonElevation(
-                defaultElevation = 10.dp
+                defaultElevation = 9.dp
             ),
             onClick = {
                 screen(item.screenRoutes)
-            }) { Text(item.title) }
+            }) {
+            Text(
+                item.title, style = TextStyle(
+                    fontSize = 19.sp,
+                )
+            )
+        }
     }
 }
