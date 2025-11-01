@@ -3,6 +3,7 @@
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.copy
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
@@ -25,6 +26,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -90,6 +92,9 @@ fun ExpressiveListItem(
             .graphicsLayer {
                 scaleX = scale
                 scaleY = scale
+                this.shadowElevation = 15.dp.toPx()
+                this.spotShadowColor = Color.Black.copy(alpha = 0.4f)
+                this.ambientShadowColor = Color.Black.copy(alpha = 0.3f)
             },
     ) {
         ElevatedButton(
@@ -100,10 +105,16 @@ fun ExpressiveListItem(
             colors = ButtonDefaults.buttonColors(containerColor = Purple80),
             shape = RoundedCornerShape(15.dp),
             elevation = buttonElevation(
-                defaultElevation = 9.dp
+                defaultElevation = 15.dp,
+                pressedElevation = 2.dp
             ),
+            /*modifierWithShadow = Modifier.graphicsLayer {
+                this.shadowElevation = 15.dp.toPx() // Ensure this matches defaultElevation
+                this.spotShadowColor = Color.Black.copy(alpha = 0.4f) // Darker spot shadow
+                this.ambientShadowColor = Color.Black.copy(alpha = 0.2f) // Darker ambient shadow
+            },*/
             onClick = {
-                screen(item.screenRoutes)
+                //screen(item.screenRoutes)
             }) {
             Text(
                 item.title,
