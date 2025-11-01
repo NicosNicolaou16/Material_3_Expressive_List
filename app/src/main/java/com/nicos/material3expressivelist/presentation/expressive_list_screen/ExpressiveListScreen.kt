@@ -6,6 +6,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -40,8 +41,9 @@ import com.nicos.material3expressivelist.ui.theme.Purple80
 fun ExpressiveListRoot(
     navController: NavHostController,
 ) {
-    Scaffold {
+    Scaffold { paddingValues ->
         ExpressiveListScreen(
+            paddingValues = paddingValues,
             screen = { navController.navigate(it) }
         )
     }
@@ -49,6 +51,7 @@ fun ExpressiveListRoot(
 
 @Composable
 fun ExpressiveListScreen(
+    paddingValues: PaddingValues,
     state: ExpressiveListViewModel = hiltViewModel(),
     screen: (ScreenRoutes) -> Unit
 ) {
@@ -56,7 +59,7 @@ fun ExpressiveListScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 30.dp)
+            .padding(top = paddingValues.calculateTopPadding())
     ) {
         items(
             items = collectAsState,

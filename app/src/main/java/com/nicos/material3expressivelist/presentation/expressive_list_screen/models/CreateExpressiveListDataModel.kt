@@ -2,7 +2,6 @@ package com.nicos.material3expressivelist.presentation.expressive_list_screen.mo
 
 import android.content.Context
 import com.nicos.material3expressivelist.R
-import com.nicos.material3expressivelist.presentation.expressive_list_screen.models.ExpressiveListDataModel
 import com.nicos.material3expressivelist.presentation.navigation.ScreenRoutes
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
