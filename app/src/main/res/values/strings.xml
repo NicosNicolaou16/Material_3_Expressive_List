@@ -25,4 +25,11 @@
     <string name="send_feedback">Send Feedback</string>
     <string name="send_feedback_button">Send Feedback Button</string>
     <string name="f11">F11</string>
+    <string name="loading_infinity_default">Loading Infinity (Default)</string>
+    <string name="loading_infinity_indeterminateindicatorpolygons">Loading Infinity (IndeterminateIndicatorPolygons)</string>
+    <string name="loading_infinity_custom">Loading Infinity (Custom)</string>
+    <string name="set_loading_progress">Set loading progress:</string>
+    <string name="linear_progress_indicator">Linear Progress Indicator</string>
+    <string name="linear_wavy_progress_indicator">Linear Wavy Progress Indicator</string>
+    <string name="circular_wavy_progress_indicator">Circular Wavy Progress Indicator</string>
 </resources>

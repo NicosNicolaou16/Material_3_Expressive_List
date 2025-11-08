@@ -53,7 +53,7 @@ fun SplitButtonsRoot(
     Scaffold(
         topBar = {
             CustomToolbar(
-                title = "Split Buttons",
+                title = stringResource(R.string.split_buttons),
                 backButton = {
                     navController.popBackStack()
                 }

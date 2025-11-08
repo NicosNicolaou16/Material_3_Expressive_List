@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.nicos.material3expressivelist.presentation.buttons_group_screen.ButtonGroupsRoot
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.ExpressiveListRoot
+import com.nicos.material3expressivelist.presentation.loading_progress_indicator.LoadingProgressIndicatorRoot
 import com.nicos.material3expressivelist.presentation.split_buttons_screen.SplitButtonsRoot
 
 @Composable
@@ -34,13 +35,13 @@ fun Navigation(innerPadding: PaddingValues) {
             )
         }
 
-        /*composable<ScreenRoutes.LoadingProgressIndicatorScreen> {
+        composable<ScreenRoutes.LoadingProgressIndicatorScreen> {
             LoadingProgressIndicatorRoot(
                 navController = navController
             )
         }
 
-        composable<ScreenRoutes.FabMenuWithListScreen> {
+        /*composable<ScreenRoutes.FabMenuWithListScreen> {
             FabMenuWithListRoot(
                 navController = navController
             )
