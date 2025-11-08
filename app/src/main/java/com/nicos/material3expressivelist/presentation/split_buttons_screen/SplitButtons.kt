@@ -37,6 +37,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
@@ -80,19 +81,22 @@ fun SplitButtons(
         SplitButtonLayout(
             leadingButton = {
                 SplitButtonDefaults.LeadingButton(onClick = {
-                    Toast.makeText(context, "Leading Button", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.leading_button), Toast.LENGTH_SHORT
+                    ).show()
                 }) {
                     Icon(
                         painter = painterResource(id = R.drawable.edit_24px),
                         modifier = Modifier.size(SplitButtonDefaults.LeadingIconSize),
-                        contentDescription = "Localized description",
+                        contentDescription = stringResource(R.string.edit_button),
                     )
                     Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                    Text("My Button")
+                    Text(stringResource(R.string.my_button))
                 }
             },
             trailingButton = {
-                val description = "Toggle Button"
+                val description = stringResource(R.string.toggle_button)
                 // Icon-only trailing button should have a tooltip for a11y.
                 TooltipBox(
                     positionProvider =
@@ -114,7 +118,7 @@ fun SplitButtons(
                         val rotation: Float by
                         animateFloatAsState(
                             targetValue = if (checked) 180f else 0f,
-                            label = "Trailing Icon Rotation",
+                            label = stringResource(R.string.trailing_icon_rotation),
                         )
                         Icon(
                             Icons.Filled.KeyboardArrowDown,
@@ -124,7 +128,7 @@ fun SplitButtons(
                                     .graphicsLayer {
                                         this.rotationZ = rotation
                                     },
-                            contentDescription = "Localized description",
+                            contentDescription = stringResource(R.string.trailing_icon),
                         )
                     }
                 }
@@ -133,8 +137,10 @@ fun SplitButtons(
 
         DropdownMenu(expanded = checked, onDismissRequest = { checked = false }) {
             DropdownMenuItem(
-                text = { Text("Edit") },
-                onClick = { Toast.makeText(context, "Edit Button", Toast.LENGTH_SHORT).show() },
+                text = { Text(stringResource(R.string.edit)) },
+                onClick = {
+                    Toast.makeText(context, R.string.edit_button, Toast.LENGTH_SHORT).show()
+                },
                 leadingIcon = {
                     Icon(
                         painter = painterResource(id = R.drawable.edit_24px),
@@ -143,8 +149,13 @@ fun SplitButtons(
                 },
             )
             DropdownMenuItem(
-                text = { Text("Settings") },
-                onClick = { Toast.makeText(context, "Settings Button", Toast.LENGTH_SHORT).show() },
+                text = { Text(stringResource(R.string.settings)) },
+                onClick = {
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.settings_button), Toast.LENGTH_SHORT
+                    ).show()
+                },
                 leadingIcon = {
                     Icon(
                         painter = painterResource(id = R.drawable.settings_24px),
@@ -154,9 +165,12 @@ fun SplitButtons(
             )
             HorizontalDivider()
             DropdownMenuItem(
-                text = { Text("Send Feedback") },
+                text = { Text(stringResource(R.string.send_feedback)) },
                 onClick = {
-                    Toast.makeText(context, "Send Feedback Button", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.send_feedback_button), Toast.LENGTH_SHORT
+                    ).show()
                 },
                 leadingIcon = {
                     Icon(
@@ -164,7 +178,7 @@ fun SplitButtons(
                         contentDescription = null
                     )
                 },
-                trailingIcon = { Text("F11", textAlign = TextAlign.Center) },
+                trailingIcon = { Text(stringResource(R.string.f11), textAlign = TextAlign.Center) },
             )
         }
     }
