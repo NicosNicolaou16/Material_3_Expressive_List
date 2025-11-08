@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.floating_toolbar_with_list.FloatingToolbarWithListRoot
 import com.nicos.material3expressivelist.presentation.buttons_group_screen.ButtonGroupsRoot
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.ExpressiveListRoot
 import com.nicos.material3expressivelist.presentation.fab_menu.FabMenuRoot
@@ -55,13 +56,13 @@ fun Navigation(innerPadding: PaddingValues) {
             )
         }
 
-        /*composable<ScreenRoutes.FloatingToolBarWithListScreen> {
+        composable<ScreenRoutes.FloatingToolBarWithListScreen> {
             FloatingToolbarWithListRoot(
                 navController = navController
             )
         }
 
-        composable<ScreenRoutes.FloatingToolBarScreen> {
+        /*composable<ScreenRoutes.FloatingToolBarScreen> {
             FloatingToolbarRoot(
                 navController = navController
             )
