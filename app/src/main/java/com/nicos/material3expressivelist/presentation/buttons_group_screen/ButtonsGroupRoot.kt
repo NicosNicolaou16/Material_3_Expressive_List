@@ -25,10 +25,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.nicos.material3expressivelist.R
 import com.nicos.material3expressivelist.presentation.CustomToolbar
+import com.nicos.material3expressivelist.ui.theme.Material3ExpressiveListTheme
 import kotlin.collections.fill
 import kotlin.collections.forEachIndexed
 import kotlin.collections.lastIndex
@@ -150,4 +152,26 @@ fun ContainerButton(
     )
     Spacer(Modifier.size(ToggleButtonDefaults.IconSpacing))
     Text(label)
+}
+
+@Preview(showBackground = true, name = "Multiple Selection Group")
+@Composable
+private fun ButtonsGroupMultiSelectPreview() {
+    Material3ExpressiveListTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Title(text = "Multiple Selection")
+            ButtonsGroup(isSingleSelection = false)
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Single Selection Group")
+@Composable
+private fun ButtonsGroupSingleSelectPreview() {
+    Material3ExpressiveListTheme {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Title(text = "Single Selection")
+            ButtonsGroup(isSingleSelection = true)
+        }
+    }
 }
