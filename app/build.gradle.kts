@@ -61,6 +61,9 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.hilt.compose)
+    implementation(libs.androidx.compose.runtime)
+    // Material
+    implementation(libs.androidx.material)
     // Material Design 3
     implementation(libs.androidx.compose.material3)
     // Hilt

@@ -1,6 +1,6 @@
 package com.nicos.material3expressivelist.presentation.expressive_list_screen
 
-import android.util.Log
+import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nicos.material3expressivelist.presentation.expressive_list_screen.models.CreateExpressiveListDataModel
@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 
+@Stable
 @HiltViewModel
 class ExpressiveListViewModel @Inject constructor(
     private val createExpressiveListDataModel: CreateExpressiveListDataModel

@@ -8,4 +8,9 @@
     <string name="floating_toolbar_with_list">Floating toolbar with list</string>
     <string name="floating_toolbar">Floating toolbar</string>
     <string name="material_expressive_showcase">Material Expressive Showcase</string>
+    <string name="multiple_selection">Multiple Selection</string>
+    <string name="single_selection">Single Selection</string>
+    <string name="work">Work</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="coffee">Coffee</string>
 </resources>
