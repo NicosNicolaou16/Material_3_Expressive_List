@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.hilt.compose)
     implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.compose.material.icons.extended)
     // Material
     implementation(libs.androidx.material)
     // Material Design 3

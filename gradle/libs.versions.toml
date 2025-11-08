@@ -9,6 +9,7 @@ lifecycleRuntimeKtx = "2.9.4"
 activityCompose = "1.11.0"
 composeBom = "2025.11.00"
 material3 = "1.5.0-alpha08"
+materialIconsExtended = "1.7.8"
 navigationCompose = "2.9.6"
 kspVersion = "2.3.2"
 hiltVersion = "2.57.2"
@@ -18,6 +19,7 @@ materialDesignVersion = "1.13.0"
 runtime = "1.9.4"
 
 [libraries]
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 # Compose
