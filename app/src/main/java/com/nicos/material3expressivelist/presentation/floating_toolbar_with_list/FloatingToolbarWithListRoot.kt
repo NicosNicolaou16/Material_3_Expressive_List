@@ -50,7 +50,7 @@ fun FloatingToolbarWithListRoot(
     Scaffold(
         topBar = {
             CustomToolbar(
-                title = "Floating Toolbar With List",
+                title = stringResource(R.string.floating_toolbar_with_list),
                 backButton = {
                     navController.popBackStack()
                 }
