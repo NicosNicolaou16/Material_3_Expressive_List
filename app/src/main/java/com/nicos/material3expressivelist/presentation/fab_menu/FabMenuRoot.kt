@@ -54,7 +54,7 @@ fun FabMenuRoot(
     Scaffold(
         topBar = {
             CustomToolbar(
-                title = "Fab Menu",
+                title = stringResource(R.string.fab_menu),
                 backButton = {
                     navController.popBackStack()
                 }

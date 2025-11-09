@@ -53,7 +53,7 @@ fun LoadingProgressIndicatorRoot(
     Scaffold(
         topBar = {
             CustomToolbar(
-                title = "Loading/Progress Indicator",
+                title = stringResource(R.string.loading_progress_indicator_title),
                 backButton = {
                     navController.popBackStack()
                 }

@@ -3,6 +3,7 @@
     <string name="button_groups">Button Groups</string>
     <string name="split_buttons">Split Buttons</string>
     <string name="loading_progress_indicator">Loading Progress Indicator</string>
+    <string name="loading_progress_indicator_title">Loading/Progress Indicator</string>
     <string name="fab_menu_with_list">Fab Menu with List</string>
     <string name="fab_menu">Fab Menu</string>
     <string name="floating_toolbar_with_list">Floating toolbar with list</string>
@@ -43,4 +44,6 @@
     <string name="expanded">Expanded</string>
     <string name="collapsed">Collapsed</string>
     <string name="close_menu">Close menu</string>
+    <string name="processes">Processes</string>
+    <string name="back">Back</string>
 </resources>
