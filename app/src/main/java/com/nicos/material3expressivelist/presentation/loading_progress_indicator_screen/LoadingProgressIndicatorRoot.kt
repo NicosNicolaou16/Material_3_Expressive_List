@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package com.nicos.material3expressivelist.presentation.loading_progress_indicator
+package com.nicos.material3expressivelist.presentation.loading_progress_indicator_screen
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animate

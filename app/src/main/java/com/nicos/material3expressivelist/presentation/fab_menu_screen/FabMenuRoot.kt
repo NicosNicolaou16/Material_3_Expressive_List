@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package com.nicos.material3expressivelist.presentation.fab_menu
+package com.nicos.material3expressivelist.presentation.fab_menu_screen
 
 import android.annotation.SuppressLint
 import android.widget.Toast
