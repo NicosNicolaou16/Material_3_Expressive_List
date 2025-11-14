@@ -20,7 +20,7 @@ Material 3 features and Jetpack Compose animation techniques.
 
 | Button Groups                                      | Split Buttons                                       |
 |----------------------------------------------------|-----------------------------------------------------|
-| <img src="examples/group_buttons.gif" width="250"> | <img src="examples/split_buttons.gif" width="250">  |
+| <img src="examples/group_buttons.gif" width="150"> | <img src="examples/split_buttons.gif" width="250">  |
 | *Single & multi-selection toggle buttons.*         | *Buttons with a primary action and secondary menu.* |
 
 | FAB Menu with List                                      | Progress Indicators                                     |
