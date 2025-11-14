@@ -37,3 +37,15 @@ Target SDK version: 36 <br />
 Minimum SDK version: 29 <br />
 Kotlin version: 2.2.21 <br />
 Gradle version: 8.13.1 <br />
+
+## References
+
+- [Material Expressive](https://m3.material.io/blog/building-with-m3-expressive)
+    - [Buttons Group](https://m3.material.io/components/button-groups/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
+    - [Split Buttons](https://m3.material.io/components/split-button/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
+    - Loading/Progress Indicator: Loading Indicator, Circular Progress Indicator, Linear Progress
+      Indicator, Waves Loading Indicator and Custom Loading Indicator <br />
+        - [Loading Indicator](https://m3.material.io/components/loading-indicator/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25)
+        - [Progress Indicator](https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#LinearWavyProgressIndicator(androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.drawscope.Stroke,androidx.compose.ui.graphics.drawscope.Stroke,androidx.compose.ui.unit.Dp,kotlin.Float,androidx.compose.ui.unit.Dp,androidx.compose.ui.unit.Dp))
+    - [Fab Menu with list and Fab Menu standalone](https://m3.material.io/components/fab-menu/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
+    - [Floating Toolbar with list and Floating Toolbar standalone](https://m3.material.io/components/toolbars/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
