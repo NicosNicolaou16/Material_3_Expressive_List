@@ -18,5 +18,18 @@ Material 3 features and Jetpack Compose animation techniques.
 
 <p align="left">
   <a title="simulator_image"><img src="examples/group_buttons.gif" height="530" width="250"></a>
+
+| Button Groups| FAB & Floating Menus                            |
+| ----------------------------------------------- | ----------------------------------------------- |
+| <img src="examples/group_buttons.gif" width="250"> | <img src="examples/fab_menu.gif" width="250"> |
+| *Single & multi-selection toggle buttons.*        | *Floating Action Button that expands a menu.*   |
+
+| Floating Toolbars                               | Expressive Buttons                              |
+| ----------------------------------------------- | ----------------------------------------------- |
+| <img src="examples/floating_toolbar.gif" width="250"> | <img src="examples/expressive_buttons.gif" width="250"> |
+| *A toolbar that appears with list scrolling.*   | *Buttons with fluid click animations.*          |
+
+<br>
+
 </p>
 
