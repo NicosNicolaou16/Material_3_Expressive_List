@@ -16,3 +16,15 @@ Material 3 features and Jetpack Compose animation techniques.
 * **Custom Progress Indicators**: Styled and animated progress bars and indicators.
 * **Split Buttons**: Compound buttons that combine a primary action with a secondary dropdown menu.
 
+| Expressive Buttons & Groups                                 | FAB & Floating Menus                                        |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Expressive Buttons](examples/button_groups.mp4)         | ![FAB Menu](demos/fab_menu.gif)                             |
+| *Fluid buttons that animate on click.*                      | *Floating Action Button that expands into a menu.*          |
+| ![Button Groups](demos/button_groups.gif)                   | ![Floating Toolbar](demos/floating_toolbar.gif)             |
+| *Single and multi-selection toggle button groups.*          | *A toolbar that appears gracefully with list scrolling.*    |
+|                                                             |                                                             |
+| **Split Buttons & Indicators**                              |                                                             |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Split Buttons](demos/split_buttons.gif)                   | ![Progress Indicators](demos/progress_indicators.gif)       |
+| *Buttons with a primary action and secondary menu.*         | *Custom-styled and animated progress indicators.*           |
+
