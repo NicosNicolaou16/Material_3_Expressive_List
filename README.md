@@ -34,6 +34,11 @@ Fluid, delightful buttons that animate in response to user interaction.
 
 Connected single- and multi-selection button groups following Material 3’s expressive design.
 
+### **Split Buttons**
+
+Compound buttons featuring a primary action and a secondary dropdown menu—ideal for multi-action
+workflows.
+
 ### **FAB Menus**
 
 Floating Action Buttons that expand into contextual menus—available both standalone and integrated
@@ -46,11 +51,6 @@ Elegant contextual toolbars that appear and disappear with smooth animations dur
 ### **Custom Progress Indicators**
 
 Beautifully styled and animated linear and circular indicators, including expressive variants.
-
-### **Split Buttons**
-
-Compound buttons featuring a primary action and a secondary dropdown menu—ideal for multi-action
-workflows.
 
 ---
 
