@@ -87,7 +87,6 @@ To use or explore the expressive Material 3 components in this repository, follo
 
 ```bash
 git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
-cd Material_3_Expressive_List
 ```
 
 ## 🧾 Versioning
