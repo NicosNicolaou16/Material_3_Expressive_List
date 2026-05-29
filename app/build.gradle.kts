@@ -13,7 +13,7 @@ android {
     compileSdk {
         version = release(36)
     }
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "37.0.0"
 
     defaultConfig {
         applicationId = "com.nicos.material3expressivelist"
