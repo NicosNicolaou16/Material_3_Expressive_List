@@ -46,7 +46,7 @@ fun Navigation(innerPadding: PaddingValues) {
         onBack = {
             navigator.goBack()
         },
-        sceneStrategy = sceneStrategy,
+        sceneStrategies = listOf(sceneStrategy),
         entryDecorators = entryDecorators,
         entryProvider = entryProvider {
             entry<ExpressiveListScreen> {
