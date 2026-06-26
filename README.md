@@ -99,7 +99,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 
 ## 🧾 Versioning
 
-Material 3 version: 1.5.0-alpha20 <br />
+Material 3 version: 1.5.0-alpha22 <br />
 Target SDK version: 37 <br />
 Minimum SDK version: 29 <br />
 Kotlin version: 2.4.0 <br />
