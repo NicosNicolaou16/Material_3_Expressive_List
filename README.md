@@ -105,12 +105,6 @@ Minimum SDK version: 29 <br />
 Kotlin version: 2.4.10 <br />
 Gradle version: 9.3.2 <br />
 
-## ⭐ Stargazers
-
-If you enjoy this project, please give it a star!
-Check out all the stargazers
-here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expressive_List/stargazers)
-
 ## 🔗 References
 
 - [Material Expressive](https://m3.material.io/blog/building-with-m3-expressive)
