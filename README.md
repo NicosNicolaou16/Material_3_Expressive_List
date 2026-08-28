@@ -99,11 +99,11 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 
 ## 🧾 Versioning
 
-Material 3 version: 1.5.0-alpha27 <br />
-Target SDK version: 37 <br />
-Minimum SDK version: 29 <br />
-Kotlin version: 2.4.10 <br />
-Gradle version: 9.3.2 <br />
+- **Material 3 version:** **1.5.0-alpha27**
+- **Target SDK:** **36**
+- **Minimum SDK:** **29**
+- **Kotlin Version:** **2.4.10**
+- **Gradle Version:** **9.3.2**
 
 ## 🔗 References
 
