@@ -82,8 +82,7 @@ fun SplitButtons(
             leadingButton = {
                 SplitButtonDefaults.LeadingButton(onClick = {
                     Toast.makeText(
-                        context,
-                        context.getString(R.string.leading_button), Toast.LENGTH_SHORT
+                        context, R.string.leading_button, Toast.LENGTH_SHORT
                     ).show()
                 }) {
                     Icon(
@@ -152,8 +151,7 @@ fun SplitButtons(
                 text = { Text(stringResource(R.string.settings)) },
                 onClick = {
                     Toast.makeText(
-                        context,
-                        context.getString(R.string.settings_button), Toast.LENGTH_SHORT
+                        context, R.string.settings_button, Toast.LENGTH_SHORT
                     ).show()
                 },
                 leadingIcon = {
@@ -168,8 +166,7 @@ fun SplitButtons(
                 text = { Text(stringResource(R.string.send_feedback)) },
                 onClick = {
                     Toast.makeText(
-                        context,
-                        context.getString(R.string.send_feedback_button), Toast.LENGTH_SHORT
+                        context, R.string.send_feedback_button, Toast.LENGTH_SHORT
                     ).show()
                 },
                 leadingIcon = {
