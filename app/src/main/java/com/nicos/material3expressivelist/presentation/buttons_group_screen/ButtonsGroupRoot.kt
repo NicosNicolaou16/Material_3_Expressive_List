@@ -113,7 +113,7 @@ fun ButtonsGroup(
                     checked[index] = it
                 },
                 modifier = modifiers[index],
-                colors = ToggleButtonDefaults.toggleButtonColors(
+                colors = ToggleButtonDefaults.colors(
                     checkedContainerColor = MaterialTheme.colorScheme.primary,
                     checkedContentColor = MaterialTheme.colorScheme.onPrimary,
                     disabledContainerColor = MaterialTheme.colorScheme.surface,

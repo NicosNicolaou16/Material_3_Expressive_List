@@ -92,7 +92,7 @@ fun ExpressiveListScreen(
     ) {
         items(
             items = collectAsState,
-            key = { it.title }
+            key = { it.titleRes }
         ) {
             ExpressiveListItem(item = it, screen = screen)
         }
@@ -144,7 +144,7 @@ fun ExpressiveListItem(
                 screen(item.screenRoutes)
             }) {
             Text(
-                item.title,
+                stringResource(item.titleRes),
                 textAlign = TextAlign.Center,
                 style = TextStyle(
                     fontSize = 21.sp,

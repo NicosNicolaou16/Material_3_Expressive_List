@@ -3,6 +3,6 @@ package com.nicos.material3expressivelist.presentation.expressive_list_screen.mo
 import androidx.navigation3.runtime.NavKey
 
 data class ExpressiveListDataModel(
-    val title: String,
+    val titleRes: Int,
     val screenRoutes: NavKey
 )

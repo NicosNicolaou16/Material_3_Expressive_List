@@ -75,6 +75,11 @@ fun FabMenuRoot(
 fun FabMenu(
     paddingValues: PaddingValues
 ) {
+    val expandedStr = stringResource(R.string.expanded)
+    val collapsedStr = stringResource(R.string.collapsed)
+    val toggleMenuStr = stringResource(R.string.toggle_menu)
+    val closeMenuStr = stringResource(R.string.close_menu)
+
     val context = LocalContext.current
     val items =
         listOf(
@@ -98,10 +103,8 @@ fun FabMenu(
                         .semantics {
                             traversalIndex = -1f
                             stateDescription =
-                                if (fabMenuExpanded) context.getString(R.string.expanded) else context.getString(
-                                    R.string.collapsed
-                                )
-                            contentDescription = context.getString(R.string.toggle_menu)
+                                if (fabMenuExpanded) expandedStr else collapsedStr
+                            contentDescription = toggleMenuStr
                         },
                 checked = fabMenuExpanded,
                 onCheckedChange = { fabMenuExpanded = !fabMenuExpanded },
@@ -129,7 +132,7 @@ fun FabMenu(
                                 customActions =
                                     listOf(
                                         CustomAccessibilityAction(
-                                            label = context.getString(R.string.close_menu),
+                                            label = closeMenuStr,
                                             action = {
                                                 true
                                             },

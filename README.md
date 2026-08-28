@@ -99,17 +99,11 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 
 ## 🧾 Versioning
 
-Material 3 version: 1.5.0-alpha22 <br />
-Target SDK version: 37 <br />
-Minimum SDK version: 29 <br />
-Kotlin version: 2.4.0 <br />
-Gradle version: 9.2.1 <br />
-
-## ⭐ Stargazers
-
-If you enjoy this project, please give it a star!
-Check out all the stargazers
-here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expressive_List/stargazers)
+- **Material 3 version:** **1.5.0-alpha27**
+- **Target SDK:** **36**
+- **Minimum SDK:** **29**
+- **Kotlin Version:** **2.4.10**
+- **Gradle Version:** **9.3.2**
 
 ## 🔗 References
 
@@ -121,3 +115,13 @@ here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expre
     - [Fab Menu with list and Fab Menu standalone](https://m3.material.io/components/fab-menu/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
     - [Floating Toolbar with list and Floating Toolbar standalone](https://m3.material.io/components/toolbars/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
     - [Sliders](https://m3.material.io/components/sliders/overview) <br />
+
+## ⭐ Stargazers
+
+If you enjoy this project, please give it a star!
+Check out all the stargazers
+here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expressive_List/stargazers)
+
+## 🙏 Support & Contributions
+
+This project is actively maintained. Feedback, bug reports, and feature requests are welcome! Please feel free to **open an issue** or submit a **pull request**.
