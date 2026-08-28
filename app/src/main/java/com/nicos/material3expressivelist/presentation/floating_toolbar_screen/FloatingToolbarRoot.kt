@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package com.nick.samplecomposeandhilt.compose.main_bottom_navigation_view.processes.processes_screen.screens.floating_toolbar
+package com.nicos.material3expressivelist.presentation.floating_toolbar_screen
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
@@ -76,9 +76,7 @@ fun FloatingToolbar(
                 IconButton(
                     onClick = {
                         Toast.makeText(
-                            context,
-                            context.getString(R.string.settings),
-                            Toast.LENGTH_SHORT
+                            context, R.string.settings, Toast.LENGTH_SHORT
                         ).show()
                     },
                 ) {
@@ -89,7 +87,7 @@ fun FloatingToolbar(
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 IconButton(onClick = {
-                    Toast.makeText(context, context.getString(R.string.edit), Toast.LENGTH_SHORT)
+                    Toast.makeText(context, R.string.edit, Toast.LENGTH_SHORT)
                         .show()
                 }) {
                     Icon(
@@ -102,9 +100,7 @@ fun FloatingToolbar(
                     enabled = true,
                     onClick = {
                         Toast.makeText(
-                            context,
-                            context.getString(R.string.back),
-                            Toast.LENGTH_SHORT
+                            context, R.string.back, Toast.LENGTH_SHORT
                         ).show()
                     }) {
                     Icon(
@@ -115,9 +111,7 @@ fun FloatingToolbar(
                 Spacer(modifier = Modifier.width(20.dp))
                 IconButton(enabled = true, onClick = {
                     Toast.makeText(
-                        context,
-                        context.getString(R.string.processes),
-                        Toast.LENGTH_SHORT
+                        context, R.string.processes, Toast.LENGTH_SHORT
                     ).show()
                 }) {
                     Icon(
