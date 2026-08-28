@@ -91,6 +91,11 @@ fun FabMenuWithListRoot(
 fun FabMenuScreen(
     paddingValues: PaddingValues
 ) {
+    val expandedStr = stringResource(R.string.expanded)
+    val collapsedStr = stringResource(R.string.collapsed)
+    val toggleMenuStr = stringResource(R.string.toggle_menu)
+    val closeMenuStr = stringResource(R.string.close_menu)
+
     val context = LocalContext.current
     val listState = rememberLazyListState()
     val fabVisible by remember { derivedStateOf { listState.firstVisibleItemIndex == 0 } }
@@ -136,10 +141,8 @@ fun FabMenuScreen(
                             .semantics {
                                 traversalIndex = -1f
                                 stateDescription =
-                                    if (fabMenuExpanded) context.getString(R.string.expanded) else context.getString(
-                                        R.string.collapsed
-                                    )
-                                contentDescription = context.getString(R.string.toggle_menu)
+                                    if (fabMenuExpanded) expandedStr else collapsedStr
+                                contentDescription = toggleMenuStr
                             }
                             .animateFloatingActionButton(
                                 visible = fabVisible || fabMenuExpanded,
@@ -172,7 +175,7 @@ fun FabMenuScreen(
                                     customActions =
                                         listOf(
                                             CustomAccessibilityAction(
-                                                label = context.getString(R.string.close_menu),
+                                                label = closeMenuStr,
                                                 action = {
                                                     fabMenuExpanded = false
                                                     true
