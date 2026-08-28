@@ -103,7 +103,7 @@ Material 3 version: 1.5.0-alpha27 <br />
 Target SDK version: 37 <br />
 Minimum SDK version: 29 <br />
 Kotlin version: 2.4.10 <br />
-Gradle version: 9.2.1 <br />
+Gradle version: 9.3.2 <br />
 
 ## ⭐ Stargazers
 
