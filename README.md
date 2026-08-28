@@ -121,3 +121,13 @@ here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expre
     - [Fab Menu with list and Fab Menu standalone](https://m3.material.io/components/fab-menu/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
     - [Floating Toolbar with list and Floating Toolbar standalone](https://m3.material.io/components/toolbars/overview?utm_source=blog&utm_medium=referral&utm_campaign=IO25) <br />
     - [Sliders](https://m3.material.io/components/sliders/overview) <br />
+
+## ⭐ Stargazers
+
+If you enjoy this project, please give it a star!
+Check out all the stargazers
+here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Material_3_Expressive_List/stargazers)
+
+## 🙏 Support & Contributions
+
+This project is actively maintained. Feedback, bug reports, and feature requests are welcome! Please feel free to **open an issue** or submit a **pull request**.
