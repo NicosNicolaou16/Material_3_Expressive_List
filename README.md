@@ -103,7 +103,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 - **Target SDK:** **36**
 - **Minimum SDK:** **29**
 - **Kotlin Version:** **2.4.10**
-- **Gradle Version:** **9.3.2**
+- **Gradle Version:** **9.4.1**
 
 ## 🔗 References
 
