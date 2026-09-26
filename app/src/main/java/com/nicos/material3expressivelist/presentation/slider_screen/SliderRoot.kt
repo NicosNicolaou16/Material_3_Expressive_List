@@ -22,12 +22,9 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberRangeSliderState
+import androidx.compose.material3.rememberSliderState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -78,15 +75,19 @@ private fun SliderScreen(
 
 @Composable
 private fun StandardSliderExample() {
-    var sliderPosition by remember { mutableFloatStateOf(0F) }
+    val sliderState = rememberSliderState(
+        value = 0f,
+        steps = 9,
+        trackRange = 0f..100f,
+    )
 
     Text(stringResource(R.string.standard_slider))
     Slider(
-        value = sliderPosition,
+        state = sliderState,
         onValueChange = {
-            sliderPosition = it
+            sliderState.value = it
             if (BuildConfig.DEBUG) {
-                Log.d("StandardSlider", "Slider value at: ${sliderPosition.toInt()}")
+                Log.d("StandardSlider", "Slider value at: ${it.toInt()}")
             }
         },
         colors = SliderDefaults.colors(
@@ -94,43 +95,44 @@ private fun StandardSliderExample() {
             activeTrackColor = MaterialTheme.colorScheme.secondary,
             inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
         ),
-        steps = 9,
-        valueRange = 0f..100f,
         onValueChangeFinished = {
             if (BuildConfig.DEBUG) {
-                Log.d("StandardSlider", "Slider value finished at: ${sliderPosition.toInt()}")
+                Log.d("StandardSlider", "Slider value finished at: ${sliderState.value.toInt()}")
             }
         },
-        track = { sliderPositions ->
+        track = { state ->
             SliderDefaults.Track(
+                sliderState = state,
                 trackInsideCornerSize = 5.dp,
                 thumbTrackGapSize = 3.dp,
-                sliderState = sliderPositions,
-                modifier = Modifier
-                    .fillMaxWidth(),
+                colors = SliderDefaults.colors(
+                    thumbColor = MaterialTheme.colorScheme.secondary,
+                    activeTrackColor = MaterialTheme.colorScheme.secondary,
+                    inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+                ),
+                modifier = Modifier.fillMaxWidth(),
             )
         },
         thumb = {
-            CustomThumb(value = sliderPosition.toInt())
+            CustomThumb(value = sliderState.value.toInt())
         }
     )
 }
 
 @Composable
 private fun RangeSliderExample() {
-    val rangeSliderState =
-        rememberRangeSliderState(
-            activeRangeStart = 0f,
-            activeRangeEnd = 100f,
-            steps = 9,
-            valueRange = 0f..100f,
-        )
+    val rangeSliderState = rememberRangeSliderState(
+        startValue = 0f,
+        endValue = 100f,
+        steps = 9,
+        trackRange = 0f..100f,
+    )
 
-    LaunchedEffect(rangeSliderState.activeRangeStart, rangeSliderState.activeRangeEnd) {
+    LaunchedEffect(rangeSliderState.startValue, rangeSliderState.endValue) {
         if (BuildConfig.DEBUG) {
             Log.d(
                 "RangeSlider",
-                "Slider values at: ${rangeSliderState.activeRangeStart.toInt()} - ${rangeSliderState.activeRangeEnd.toInt()}"
+                "Slider values at: ${rangeSliderState.startValue.toInt()} - ${rangeSliderState.endValue.toInt()}"
             )
         }
     }
@@ -140,20 +142,24 @@ private fun RangeSliderExample() {
     Text(stringResource(R.string.range_slider))
     RangeSlider(
         state = rangeSliderState,
+        onValueChange = { range ->
+            rangeSliderState.startValue = range.start
+            rangeSliderState.endValue = range.endInclusive
+        },
         startThumb = {
             CustomThumb(
-                value = rangeSliderState.activeRangeStart.toInt()
+                value = rangeSliderState.startValue.toInt()
             )
         },
         endThumb = {
             CustomThumb(
-                value = rangeSliderState.activeRangeEnd.toInt()
+                value = rangeSliderState.endValue.toInt()
             )
         },
-        track = { rangeSliderState ->
+        track = { state ->
             SliderDefaults.Track(
                 colors = startThumbAndTrackColors,
-                rangeSliderState = rangeSliderState,
+                rangeSliderState = state,
             )
         },
     )
@@ -161,15 +167,19 @@ private fun RangeSliderExample() {
 
 @Composable
 private fun CenteredSliderExample() {
-    var sliderPosition by remember { mutableFloatStateOf(0f) }
+    val sliderState = rememberSliderState(
+        value = 0f,
+        steps = 9,
+        trackRange = -100f..100f,
+    )
 
     Text(text = stringResource(R.string.centered_slider))
     Slider(
-        value = sliderPosition,
+        state = sliderState,
         onValueChange = {
-            sliderPosition = it
+            sliderState.value = it
             if (BuildConfig.DEBUG) {
-                Log.d("CenteredSlider", "Slider value at: ${sliderPosition.toInt()}")
+                Log.d("CenteredSlider", "Slider value at: ${it.toInt()}")
             }
         },
         colors = SliderDefaults.colors(
@@ -177,25 +187,27 @@ private fun CenteredSliderExample() {
             activeTrackColor = MaterialTheme.colorScheme.secondary,
             inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
         ),
-        steps = 9,
-        valueRange = -100f..100f,
         onValueChangeFinished = {
             if (BuildConfig.DEBUG) {
-                Log.d("CenteredSlider", "Slider value finished at: ${sliderPosition.toInt()}")
+                Log.d("CenteredSlider", "Slider value finished at: ${sliderState.value.toInt()}")
             }
         },
-        track = { sliderPositions ->
+        track = { state ->
             SliderDefaults.CenteredTrack(
+                sliderState = state,
                 trackInsideCornerSize = 5.dp,
                 thumbTrackGapSize = 3.dp,
-                sliderState = sliderPositions,
-                modifier = Modifier
-                    .fillMaxWidth(),
+                colors = SliderDefaults.colors(
+                    thumbColor = MaterialTheme.colorScheme.secondary,
+                    activeTrackColor = MaterialTheme.colorScheme.secondary,
+                    inactiveTrackColor = MaterialTheme.colorScheme.secondaryContainer,
+                ),
+                modifier = Modifier.fillMaxWidth(),
             )
         },
         thumb = {
             CustomThumb(
-                value = sliderPosition.toInt()
+                value = sliderState.value.toInt()
             )
         }
     )
