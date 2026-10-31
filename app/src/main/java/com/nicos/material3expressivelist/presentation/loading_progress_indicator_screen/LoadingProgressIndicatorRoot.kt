@@ -27,9 +27,11 @@ import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.LoadingIndicatorDefaults
 import androidx.compose.material3.MaterialShapes
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberSliderState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -177,21 +179,25 @@ fun LoadingIndicatorScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        val sliderState = rememberSliderState(value = 0f)
+
+        val animatedProgress by animateFloatAsState(
+            targetValue = sliderState.value,
+            animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec,
+        )
+
         LoadingIndicator(
             progress = { animatedProgress },
-            polygons = polygons
+            polygons = polygons,
         )
         Spacer(Modifier.requiredHeight(30.dp))
-        Text(stringResource(R.string.set_loading_progress))
+        Text("Set loading progress:")
         Slider(
+            state = sliderState,
+            onValueChange = { sliderState.value = it },
             modifier = Modifier
                 .width(500.dp)
-                .padding(
-                    horizontal = 50.dp
-                ),
-            value = progress,
-            valueRange = 0f..1f,
-            onValueChange = { progress = it },
+                .padding(horizontal = 50.dp),
         )
     }
 }
