@@ -99,12 +99,71 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 
 ## 🧾 Versioning
 
-- **Material 3 version:** **1.5.0-beta02**
+- **Material 3 version:** **1.5.0**
 - **Target SDK:** **37**
 - **Minimum SDK:** **29**
 - **Kotlin Version:** **2.4.21**
-- **AGP Version:** **9.5.0**
-- **Gradle Version:** **9.8.2**
+- **AGP Version:** **9.5.3**
+- **Gradle Version:** **9.9.2**
+
+## 📱 Download & Try the App
+
+You can install the sample app on your phone without cloning or building the project.
+
+👉 **[Download the latest APK](https://github.com/NicosNicolaou16/Material_3_Expressive_List/releases/latest/download/Material3ExpressiveList.apk)**
+
+**Requirements:** Android 10 (API 29) or newer.
+
+### How to install
+1. Open the link above on your Android phone.
+2. Tap the downloaded `Material3ExpressiveList.apk` file.
+3. If asked, allow **"Install unknown apps"** for your browser.
+4. Tap **Install**.
+
+> All versions are available on the [Releases](https://github.com/NicosNicolaou16/Material_3_Expressive_List/releases) page.
+
+---
+
+## 🛠️ Build the APK Yourself
+
+The `release` build type is configured to produce a small, optimized APK that installs on any device:
+
+```kotlin
+buildTypes {
+    release {
+        isMinifyEnabled = true
+        isShrinkResources = true
+        signingConfig = signingConfigs.getByName("debug")
+        proguardFiles(
+            getDefaultProguardFile("proguard-android-optimize.txt"),
+            "proguard-rules.pro"
+        )
+    }
+}
+```
+
+### What each option does
+
+| Option | Description |
+|---|---|
+| `isMinifyEnabled = true` | Enables **R8**, which removes unused code and optimizes the remaining code. This makes the APK smaller and faster. |
+| `isShrinkResources = true` | Removes unused resources (images, layouts, strings). Requires `isMinifyEnabled = true`. |
+| `signingConfig = signingConfigs.getByName("debug")` | Signs the APK with the default **debug key**, so it can be installed directly on any device without a private keystore. ⚠️ Meant for testing/demo only. Not suitable for publishing on Google Play. |
+| `proguardFiles(...)` | Applies Android's default optimization rules plus the project's custom rules in `proguard-rules.pro`. |
+
+### Build command
+
+```bash
+./gradlew assembleRelease
+```
+
+The APK will be generated at:
+
+```
+app/build/outputs/apk/release/app-release.apk
+```
+
+> Release builds are not debuggable, so the app runs smoothly, which is ideal for experiencing the Material 3 Expressive animations as intended.
 
 ## 🔗 References
 
