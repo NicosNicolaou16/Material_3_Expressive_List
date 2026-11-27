@@ -103,7 +103,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 - **Target SDK:** **37**
 - **Minimum SDK:** **29**
 - **Kotlin Version:** **2.4.21**
-- **AGP Version:** **9.5.0**
+- **AGP Version:** **9.5.3**
 - **Gradle Version:** **9.8.2**
 
 ## 🔗 References
