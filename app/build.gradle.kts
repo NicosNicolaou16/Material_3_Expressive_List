@@ -31,6 +31,10 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            // Sign with the default debug key so the APK can be installed directly
+            // on any device for testing, without a private keystore.
+            // ⚠️ For demo/testing only - NOT suitable for Google Play publishing.
+            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
