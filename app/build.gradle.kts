@@ -11,7 +11,9 @@ plugins {
 android {
     namespace = "com.nicos.material3expressivelist"
     compileSdk {
-        version = release(37)
+        version = release(37) {
+            minorApiLevel = 1
+        }
     }
     buildToolsVersion = "37.0.0"
 
