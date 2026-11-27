@@ -104,7 +104,7 @@ git clone https://github.com/NicosNicolaou16/Material_3_Expressive_List.git
 - **Minimum SDK:** **29**
 - **Kotlin Version:** **2.4.21**
 - **AGP Version:** **9.5.3**
-- **Gradle Version:** **9.8.2**
+- **Gradle Version:** **9.9.2**
 
 ## 🔗 References
 
