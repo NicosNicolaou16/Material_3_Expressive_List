@@ -29,12 +29,17 @@ android {
 
     buildTypes {
         release {
+            // Enable R8: removes unused code and optimizes/obfuscates the rest
+            // -> smaller and faster APK
             isMinifyEnabled = true
+            // Remove unused resources (images, layouts, strings, etc.)
+            // Requires isMinifyEnabled = true
             isShrinkResources = true
             // Sign with the default debug key so the APK can be installed directly
             // on any device for testing, without a private keystore.
             // ⚠️ For demo/testing only - NOT suitable for Google Play publishing.
             signingConfig = signingConfigs.getByName("debug")
+            // R8 rules: Android's default optimized rules + project-specific rules
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
